@@ -8,19 +8,27 @@ class Esercizio {
     // Il programma parte con una chiamata a main().
     public static void main(String args[])
     {
-        //Variabili del programma
-        String nome;
-
-        //Creo l'oggetto in per l'input da tastiera
-        Scanner in = new Scanner( System.in );
-
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
-
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
+      Scanner in = new Scanner (System.in);
+      int n,i,imin;
+      System.out.print("numero atleti in gara");
+      n = in.nextInt();
+      String nomi[] = new nomi[n];
+      String naz[] = new naz[n];
+      double tem[]= new tem[n];
+      for (i=0;i<n;i++) {
+        nomi[i]=in.nextLine();
+        naz[i]=in.nextLine();
+        tem[i]= in.nextDouble();
+      }
+      imin=0;
+      for(i=0;i<n;i++) {
+        if ( tem[i]<tem[imin]) {
+            imin=i;
+        }
+      }
+      System.out.print("nome : " + nomi[imin]);
+      System.out.print("nazionale : " + naz[imin]);
+      System.out.print("tempo : " + tem[imin]);
     }
 }
 
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
